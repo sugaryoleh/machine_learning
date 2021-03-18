@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        label {
+            font-size: 20px;
+        }
+        div {
+          display: table;
+          margin-right: auto;
+          margin-left: auto;
+          margin-top:50px;
+
+        }
+    </style>
+</head>
+<body>
+    <div>
+        {% if dim == 1 %}
+            {% for el in array %}
+                <label><span class="label label-default">{{el}}</span></label>
+            {% endfor %}
+        <h2>Formatted</h2>
+        {% endif %}
+        {% if dim == 2 %}
+            {% for row in array %}
+                <p>
+                {% for el in row %}
+                   <label><span class="label label-default">{{el}}</span></label>
+                {% endfor %}
+                </p>
+            {% endfor %}
+            <h2>Averages</h2>
+        {% endif %}
+        {% for el in f_array %}
+        <label><span class="label label-default">{{el}}</span></label>
+        {% endfor %}
+    </div>
+</body>
+</html>

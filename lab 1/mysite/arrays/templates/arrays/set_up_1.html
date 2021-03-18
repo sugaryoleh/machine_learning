@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <style>
+        div {
+          display: table;
+          margin-right: auto;
+          margin-left: auto;
+          margin-top:50px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <form action="1" method="post">
+        {% csrf_token %}
+        <p><label for="n">Volume</label></p>
+        <p><label for="n"></label>
+        <input type="range" id="n" name="n" min="1" max="50" value="1" step="1">
+        <label for="n">50</label></p>
+
+        <p><label for="min_val">Minimum</label></p>
+        <p><label for="min_val">-50</label>
+        <input type="range" id="min_val" name="min_val" min="-50" max="1" value="1" step="1">
+        <label for="min_val">50</label></p>
+
+        <p><label for="min_val">Maximum</label></p>
+        <p><label for="max_val">-50</label>
+        <input type="range" id="max_val" name="max_val" min="-50" max="50" value="1" step="1">
+        <label for="max_val">50</label></p>
+
+        <p><input type="radio" name="_type" id="i" value="i">
+        <label for="i">Integers</label></p>
+        <p><input type="radio" name="_type" id="f" value="f">
+        <label for="f">Floats</label></p>
+        <input type="submit" value="Submit">
+    </form>
+    </div>
+</body>
+</html>
